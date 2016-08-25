@@ -32,10 +32,10 @@ public class Main {
 
         if (inputCommand.equals("1") | inputCommand.equals("2") | inputCommand.equals("3") | inputCommand.equals("4") | inputCommand.equals("5")){
             if (inputCommand.equals("1")){
-                fileManager.createFile();
+                fileManager.createFile(inputPath);
             }
             if (inputCommand.equals("2")){
-                fileManager.deleteFile("d:/code/shit.txt");
+                fileManager.deleteFile(inputPath);
            }
             if (inputCommand.equals("3")){
                 fileManager.renameFile();

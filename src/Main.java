@@ -1,5 +1,3 @@
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,7 +14,7 @@ public class Main {
 
         while(true) {
             System.out.println("===================================================================");
-            System.out.println("Please specify a path.");
+            System.out.println("Please specify a path:");
 
             String inputPath = reader.readLine();
 
@@ -25,8 +23,8 @@ public class Main {
                 System.out.println("1. Create file");
                 System.out.println("2. Delete file");
                 System.out.println("3. Rename file");
-                System.out.println("4. Find word");
-                System.out.println("5. Replace word");
+                System.out.println("4. Find word     - currently unavailable");
+                System.out.println("5. Replace word  - currently unavailable");
                 System.out.println("0. Exit");
             } else {
                 System.out.println("Path input error.");
@@ -60,6 +58,7 @@ public class Main {
             } else {
                 System.out.println("Error - wrong input");
             }
+            System.out.println("===================================================================");
             System.out.println("Anything else?");
             System.out.println("1. Yes, please");
             System.out.println("0. No. Exit please.");

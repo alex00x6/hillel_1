@@ -9,9 +9,9 @@ public class FileManager {
     public void createFile(String PathToFile) throws IOException {
         File file = new File(PathToFile);
         if(file.exists())
-            System.out.println("error: file already exists");
+            System.out.println("Error: file already exists");
         else {
-            System.out.println("no such file, creating...");
+            System.out.println("No such file, creating...");
             if (file.createNewFile())
                 System.out.println("Done");
             else{
@@ -24,9 +24,9 @@ public class FileManager {
     public void deleteFile(String PathToFile){
         File file = new File(PathToFile);
         if(file.exists())
-            System.out.println("file exists - OK");
+            System.out.println("File exists - OK");
         else
-            System.out.println("file doesn't exist - ERROR");
+            System.out.println("File doesn't exist - ERROR");
         if(file.delete())
             System.out.println(file.getName() + " deleted successfully");
         else
@@ -36,18 +36,20 @@ public class FileManager {
     public void renameFile(String PathToFile) throws IOException {
         File file = new File(PathToFile);
         if(file.exists()) {
-            System.out.println("file exists - OK");
+            System.out.println("File exists - OK");
             System.out.println("Please enter new name for this file (with a full path, of course)");
+
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             String newName = br.readLine();
+
             File newfile = new File(newName);
             if (file.renameTo(newfile))
-                System.out.println("rename successful");
+                System.out.println("Rename was successful");
             else
-                System.out.println("something went wrong...");
+                System.out.println("Something went wrong...");
         }
         else
-            System.out.println("file doesn't exist - ERROR");
+            System.out.println("File doesn't exist - ERROR");
 
     }
     public void findWord(){

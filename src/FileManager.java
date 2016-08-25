@@ -3,21 +3,23 @@ import java.io.File;
 public class FileManager {
 
 
-    public static void createFile() {
+    public void createFile() {
 
     }
 
-    public static void deleteFile() {
-
+    public void deleteFile(String PathToFile){
+        File file = new File(PathToFile);
+        file.delete();
+        System.out.println("deleted. or not?)");
     }
 
-    public static void renameFile() {
+    public void renameFile() {
 
     }
-    public static void findWord(){
+    public void findWord(){
 
     }
-    public static void replaceWord() {
+    public void replaceWord() {
 
     }
 
